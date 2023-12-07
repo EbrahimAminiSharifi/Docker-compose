@@ -1,5 +1,6 @@
-# Docker-compose
-This Repository is for all environments variables, If you know more add to this.
+# Docker-compose environment variables
+This Repository is for environment variables, 
+If you know more please append it.
 #KAFKA:
 
       KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:9093,OUTSIDE://localhost:9092
