@@ -28,8 +28,9 @@ This Repository is for all environments variables, If you know more add to this.
 
 
 
-      #Zookeeper:
-ZOO_MY_ID: 1
+#Zookeeper:
+
+      ZOO_MY_ID: 1
 
       ZOO_SERVERS: server.1=zookeeper1:2888:3888 server.2=zookeeper2:2888:3888
       
@@ -48,4 +49,37 @@ ZOO_MY_ID: 1
       ZOO_4LW_COMMANDS_WHITELIST: srvr, mntr
       
       ZOO_LOG4J_PROP: INFO,ROLLINGFILE
+
+# Mysql:
+
+      MYSQL_ROOT_PASSWORD: example_root_password
+
+      MYSQL_DATABASE: example_database
+      
+      MYSQL_USER: example_user
+      
+      MYSQL_PASSWORD: example_user_password
+      
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      
+      MYSQL_RANDOM_ROOT_PASSWORD: "no"
+      
+      MYSQL_LOG_CONSOLE: "true"
+      
+      MYSQL_LOG_QUERIES: "true"
+      
+      MYSQL_MAX_CONNECTIONS: 100
+      
+      MYSQL_MAX_ALLOWED_PACKET: 128M
+      
+      MYSQL_KEY_BUFFER_SIZE: 256M
+      
+      MYSQL_INNODB_BUFFER_POOL_SIZE: 512M
+      
+      MYSQL_INNODB_LOG_FILE_SIZE: 256M
+      
+      MYSQL_INNODB_LOG_BUFFER_SIZE: 64M
+      
+      MYSQL_INNODB_FLUSH_LOG_AT_TRX_COMMIT: 1
+
       
