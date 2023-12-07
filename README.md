@@ -28,7 +28,7 @@ This Repository is for all environments variables, If you know more add to this.
 
 
 
-#Zookeeper:
+# Zookeeper:
 
       ZOO_MY_ID: 1
 
@@ -82,4 +82,96 @@ This Repository is for all environments variables, If you know more add to this.
       
       MYSQL_INNODB_FLUSH_LOG_AT_TRX_COMMIT: 1
 
+# Debezium
+
+      GROUP_ID: 1
+      
+      CONFIG_STORAGE_TOPIC: my-connect-configs
+      
+      OFFSET_STORAGE_TOPIC: my-connect-offsets
+      
+      STATUS_STORAGE_TOPIC: my-connect-status
+      
+      BOOTSTRAP_SERVERS: kafka:9092
+      
+      KEY_CONVERTER: org.apache.kafka.connect.json.JsonConverter
+      
+      VALUE_CONVERTER: org.apache.kafka.connect.json.JsonConverter
+      
+      INTERNAL_KEY_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
+      
+      INTERNAL_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
+      
+      CONNECT_KEY_CONVERTER_SCHEMA_REGISTRY_URL: "http://schema-registry:8081"
+      
+      CONNECT_VALUE_CONVERTER_SCHEMA_REGISTRY_URL: "http://schema-registry:8081"
+      
+      CONNECT_REST_ADVERTISED_HOST_NAME: debezium
+      
+      CONNECT_PLUGIN_PATH: /usr/share/java/debezium-connector-mysql
+      
+      TZ: "UTC"
+      
+      MYSQL_HOSTNAME: mysql
+      
+      MYSQL_PORT: "3306"
+      
+      MYSQL_USER: example_user
+      
+      MYSQL_PASSWORD: example_user_password
+      
+      MYSQL_DATABASE: example_database
+      
+
+# Airflow
+
+      AIRFLOW_DATABASE_NAME: airflow
+      
+      AIRFLOW_DATABASE_USERNAME: airflow
+      
+      AIRFLOW_DATABASE_PASSWORD: airflow
+      
+      AIRFLOW_EXECUTOR: CeleryExecutor
+      
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      
+      AIRFLOW__CORE__FERNET_KEY: your_fernet_key
+      
+      AIRFLOW__WEBSERVER__SECRET_KEY: your_secret_key
+
+
+# Airflow _ scheduler
+
+      AIRFLOW_DATABASE_NAME: airflow
+      
+      AIRFLOW_DATABASE_USERNAME: airflow
+      
+      AIRFLOW_DATABASE_PASSWORD: airflow
+      
+      AIRFLOW_EXECUTOR: CeleryExecutor
+      
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      
+      AIRFLOW__CORE__FERNET_KEY: your_fernet_key
+
+# Airflow - worker
+
+      AIRFLOW_DATABASE_NAME: airflow
+      
+      AIRFLOW_DATABASE_USERNAME: airflow
+      
+      AIRFLOW_DATABASE_PASSWORD: airflow
+      
+      AIRFLOW_EXECUTOR: CeleryExecutor
+      
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      
+      AIRFLOW__CORE__FERNET_KEY: your_fernet_key
+
+# Postgres:
+      POSTGRES_USER: airflow
+      
+      POSTGRES_PASSWORD: airflow
+      
+      POSTGRES_DB: airflow
       
