@@ -175,4 +175,30 @@ If you know more please append it.
       POSTGRES_PASSWORD: airflow
       
       POSTGRES_DB: airflow
+
+# Kafka-connect
+ 
+       CONNECT_BOOTSTRAP_SERVERS:<your_kafka_bootstrap_servers>
+       
+       CONNECT_GROUP_ID:connect-group
+       
+       CONNECT_CONFIG_STORAGE_TOPIC:connect-configs
+       
+       CONNECT_OFFSET_STORAGE_TOPIC:connect-offsets
+       
+       CONNECT_STATUS_STORAGE_TOPIC:connect-status
+       
+       CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR:1
+       
+       CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR:1
+       
+       CONNECT_STATUS_STORAGE_REPLICATION_FACTOR:1
+       
+       CONNECT_KEY_CONVERTER:org.apache.kafka.connect.json.JsonConverter
+       
+       CONNECT_VALUE_CONVERTER:org.apache.kafka.connect.json.JsonConverter
+       
+       CONNECT_REST_PORT:8083
+       
+       CONNECT_PLUGIN_PATH:/usr/share/java
       
